@@ -2,7 +2,7 @@ import streamlit as st
 from datetime import datetime
 import time
 
-st.title("時間＆金額通知アプリ")
+st.title("rise or pay")
 
 alarm_time = st.time_input("通知する時間")
 money = st.number_input("金額を入力", min_value=0)
