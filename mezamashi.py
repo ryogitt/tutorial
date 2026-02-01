@@ -18,3 +18,4 @@ while True:
 
     placeholder.info("待機中...")
     time.sleep(1)
+# 山口
