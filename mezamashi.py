@@ -4,9 +4,6 @@ import time
 
 st.title("rise or pay")
 
-success_count=0
-fail_count=0
-
 
 #メールアカウント登録
 email= st.text_input("メールアドレス")
@@ -25,18 +22,26 @@ if st.button("ログイン"):
 alarm_time = st.time_input("通知する時間")
 money = st.number_input("金額を入力", min_value=0)
 
+#on of
+
+if st.button("スイッチ",key="eroganna"):
+
+
+
 #時間判定
-placeholder = st.empty()
+    placeholder = st.empty()
 
 
-while True:
-    now = datetime.now().time()
+    while True:
+        now = datetime.now().time()
 
-    if now.hour == alarm_time.hour and now.minute == alarm_time.minute:
-        placeholder.warning(f"⏰ 時間です！ 金額：{money}円")
+        if now.hour == alarm_time.hour and now.minute == alarm_time.minute:
+            placeholder.warning(f"⏰ 時間です！ 金額：{money}円")
 
         
-        break
+            break
 
-    placeholder.info("待機中...")
-    time.sleep(1)
+       
+
+        placeholder.info("待機中...")
+        time.sleep(1)
